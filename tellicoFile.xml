@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tellico PUBLIC '-//Robby Stephenson/DTD Tellico V11.0//EN' 'http://periapsis.org/tellico/dtd/v11/tellico.dtd'>
+<tellico xmlns="http://periapsis.org/tellico/" syntaxVersion="11">
+ <collection title="Mis libros" type="2">
+  <fields>
+   <field title="Título" flags="8" category="General" format="1" type="1" name="title"/>
+   <field title="Subtitulo" flags="0" category="General" format="4" description="Subtitulo del libro" type="1" name="subtitle"/>
+   <field title="Autor" flags="7" category="General" format="2" type="1" name="author"/>
+   <field title="Código" flags="34" category="General" format="4" description="Código único del libro" type="1" name="code">
+    <prop name="template">%{@id}</prop>
+   </field>
+   <field title="Editorial" flags="6" category="Publicación" format="0" type="1" name="publisher"/>
+   <field title="Edición Número" flags="4" category="Publicación" format="0" description="Edición" type="1" name="edition"/>
+   <field title="Año" flags="2" category="Publicación" format="4" description="Año de publicación" type="6" name="pub_year"/>
+   <field title="ISBN#" flags="0" category="Publicación" format="4" description="Número Internacional Estándar del Libro" type="1" name="isbn"/>
+   <field title="Páginas" flags="0" category="Publicación" format="4" description="Número de páginas" type="6" name="pages"/>
+   <field title="Género" flags="7" category="Clasificación" format="4" type="1" name="genre"/>
+   <field title="Palabras clave" flags="7" category="Clasificación" format="4" type="1" name="keyword"/>
+   <field title="Serie" flags="6" category="Clasificación" format="4" type="1" name="series"/>
+   <field title="Número en la serie" flags="0" category="Clasificación" format="4" type="6" name="series_num"/>
+   <field title="Comentarios" flags="0" category="Comentarios" format="4" description="Traductor, colección, idioma, estado del libro, etc." type="2" name="comments"/>
+   <field title="ID" flags="32" category="Personal" format="4" type="6" name="id">
+    <prop name="template">%{@id}</prop>
+   </field>
+   <field title="Donado por" flags="4" category="General" format="4" description="Nombre del donante del libro" type="1" name="donated_by"/>
+   <field title="Fecha de creación" flags="16" category="Personal" format="3" type="12" name="cdate"/>
+   <field title="Fecha de modificación" flags="16" category="Personal" format="3" type="12" name="mdate"/>
+   <field title="Prestado" flags="2" category="Personal" format="4" type="4" name="loaned"/>
+   <field title="Signatura" flags="0" category="General" format="4" description="Signatura Dewey" type="1" name="signature"/>
+  </fields>
+ </collection>
+</tellico>
