@@ -25,6 +25,8 @@ define('DATE', 'DATE()');
 define('RATING', 'INT(10)');
 
 # Utils
-define("TABLE_FORMAT", "%-15.15s\t%-15.15s\t%-15.15s\t%-15.15s\n");
+define("FIELD_TABLE_FORMAT", "%-20.20s\t%-15.15s\t%-15.15s\t%-15.15s\n");
+define("ENTRY_TABLE_FORMAT", "%-4.4s\t%-20.20s\t%-20.20s\t%-4.4s\t%-15.15s\t%-5.5s\t%-15.15s\t%-5.5s\t%-20.20s\t%-15.15s\t%-15.15s\t%-10.10s\t%-10.10s\t%-1.1s\t%-10.10s\n");
+define("BORROWERS_TABLE_FORMAT", "%-20.20s\t%-10.10s\t%-10.10s\t%-4.4s\t%-120.120s\n");
 
 ?>

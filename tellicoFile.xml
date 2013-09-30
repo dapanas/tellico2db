@@ -1,32 +1,189 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE tellico PUBLIC '-//Robby Stephenson/DTD Tellico V11.0//EN' 'http://periapsis.org/tellico/dtd/v11/tellico.dtd'>
 <tellico xmlns="http://periapsis.org/tellico/" syntaxVersion="11">
- <collection title="Mis libros" type="2">
-  <fields>
-   <field title="Título" flags="8" category="General" format="1" type="1" name="title"/>
-   <field title="Subtitulo" flags="0" category="General" format="4" description="Subtitulo del libro" type="1" name="subtitle"/>
-   <field title="Autor" flags="7" category="General" format="2" type="1" name="author"/>
-   <field title="Código" flags="34" category="General" format="4" description="Código único del libro" type="1" name="code">
-    <prop name="template">%{@id}</prop>
-   </field>
-   <field title="Editorial" flags="6" category="Publicación" format="0" type="1" name="publisher"/>
-   <field title="Edición Número" flags="4" category="Publicación" format="0" description="Edición" type="1" name="edition"/>
-   <field title="Año" flags="2" category="Publicación" format="4" description="Año de publicación" type="6" name="pub_year"/>
-   <field title="ISBN#" flags="0" category="Publicación" format="4" description="Número Internacional Estándar del Libro" type="1" name="isbn"/>
-   <field title="Páginas" flags="0" category="Publicación" format="4" description="Número de páginas" type="6" name="pages"/>
-   <field title="Género" flags="7" category="Clasificación" format="4" type="1" name="genre"/>
-   <field title="Palabras clave" flags="7" category="Clasificación" format="4" type="1" name="keyword"/>
-   <field title="Serie" flags="6" category="Clasificación" format="4" type="1" name="series"/>
-   <field title="Número en la serie" flags="0" category="Clasificación" format="4" type="6" name="series_num"/>
-   <field title="Comentarios" flags="0" category="Comentarios" format="4" description="Traductor, colección, idioma, estado del libro, etc." type="2" name="comments"/>
-   <field title="ID" flags="32" category="Personal" format="4" type="6" name="id">
-    <prop name="template">%{@id}</prop>
-   </field>
-   <field title="Donado por" flags="4" category="General" format="4" description="Nombre del donante del libro" type="1" name="donated_by"/>
-   <field title="Fecha de creación" flags="16" category="Personal" format="3" type="12" name="cdate"/>
-   <field title="Fecha de modificación" flags="16" category="Personal" format="3" type="12" name="mdate"/>
-   <field title="Prestado" flags="2" category="Personal" format="4" type="4" name="loaned"/>
-   <field title="Signatura" flags="0" category="General" format="4" description="Signatura Dewey" type="1" name="signature"/>
-  </fields>
- </collection>
+    <collection title="Colección de ejemplo" type="2">
+        <fields>
+            <field title="Título" flags="8" category="General" format="1" type="1" name="title" />
+            <field title="Subtitulo" flags="0" category="General" format="4" description="Subtitulo del libro" type="1" name="subtitulo" />
+            <field title="Autor" flags="7" category="General" format="2" type="1" name="author" />
+            <field title="Código" flags="34" category="General" format="4" description="Código único del libro" type="1" name="código">
+                <prop name="template">%{@id}</prop>
+            </field>
+            <field title="Editorial" flags="6" category="Publicación" format="0" type="1" name="publisher" />
+            <field title="Edición Número" flags="4" category="Publicación" format="0" description="Edición" type="1" name="edition" />
+            <field title="Año" flags="2" category="Publicación" format="4" description="Año de publicación" type="6" name="pub_year" />
+            <field title="ISBN#" flags="0" category="Publicación" format="4" description="Número Internacional Estándar del Libro" type="1" name="isbn" />
+            <field title="Páginas" flags="0" category="Publicación" format="4" description="Número de páginas" type="6" name="pages" />
+            <field title="Género" flags="7" category="Clasificación" format="4" type="1" name="genre" />
+            <field title="Palabras clave" flags="7" category="Clasificación" format="4" type="1" name="keyword" />
+            <field title="Serie" flags="6" category="Clasificación" format="4" type="1" name="series" />
+            <field title="Número en la serie" flags="0" category="Clasificación" format="4" type="6" name="series_num" />
+            <field title="Comentarios" flags="0" category="Comentarios" format="4" description="Traductor, colección, idioma, estado del libro, etc." type="2" name="comments" />
+            <field title="ID" flags="32" category="Personal" format="4" type="6" name="id">
+                <prop name="template">%{@id}</prop>
+            </field>
+            <field title="Donado por" flags="4" category="General" format="4" description="Nombre del donante del libro" type="1" name="donado-por" />
+            <field title="Fecha de creación" flags="16" category="Personal" format="3" type="12" name="cdate" />
+            <field title="Fecha de modificación" flags="16" category="Personal" format="3" type="12" name="mdate" />
+            <field title="Prestado" flags="2" category="Personal" format="4" type="4" name="loaned" />
+            <field title="Signatura" flags="0" category="General" format="4" description="Signatura Dewey" type="1" name="signatura" />
+        </fields>
+        <entry id="1">
+            <title>Título</title>
+            <authors>
+                <author>Autor 1</author>
+            </authors>
+            <code>1</code>
+            <publisher>Editorial</publisher>
+            <pub_year>2000</pub_year>
+            <isbn>999-999-999999-9</isbn>
+            <pages>160</pages>
+            <keywords>
+                <keyword>Keyword 1</keyword>
+                <keyword>Keyword 2</keyword>
+            </keywords>
+            <series>Nombre de la serie</series>
+            <id>1</id>
+            <donated_by>Donante</donated_by>
+            <cdate calendar="gregorian">
+                <year>2013</year>
+                <month>06</month>
+                <day>26</day>
+            </cdate>
+            <mdate calendar="gregorian">
+                <year>2013</year>
+                <month>06</month>
+                <day>29</day>
+            </mdate>
+            <loaned>true</loaned>
+            <signature>Signatura</signature>
+        </entry>
+        <entry id="2">
+            <title>Título</title>
+            <authors>
+                <author>Autor 1</author>
+                <author>Autor 2</author>
+            </authors>
+            <code>2</code>
+            <publisher>Editorial</publisher>
+            <pub_year>2005</pub_year>
+            <isbn>999-999-999999-9</isbn>
+            <pages>116</pages>
+            <keywords>
+                <keyword>Keyword 1</keyword>
+            </keywords>
+            <id>2</id>
+            <donated_by>Donante</donated_by>
+            <cdate calendar="gregorian">
+                <year>2012</year>
+                <month>10</month>
+                <day>15</day>
+            </cdate>
+            <mdate calendar="gregorian">
+                <year>2013</year>
+                <month>09</month>
+                <day>22</day>
+            </mdate>
+            <signature>Signatura</signature>
+        </entry>
+        <entry id="3">
+            <title>Título</title>
+            <authors>
+                <author>Autor</author>
+            </authors>
+            <code>3</code>
+            <publisher>Editorial</publisher>
+            <edition>Número de la edición</edition>
+            <pub_year>2006</pub_year>
+            <isbn>999-999-999999-9</isbn>
+            <pages>530</pages>
+            <genres>
+                <genre>Género 1</genre>
+                <genre>Género 2</genre>
+            </genres>
+            <keywords>
+                <keyword>Keyword 1, Keyword 2, Keyword 3</keyword>
+            </keywords>
+            <id>3</id>
+            <donated_by>Donante</donated_by>
+            <cdate calendar="gregorian">
+                <year>2012</year>
+                <month>11</month>
+                <day>04</day>
+            </cdate>
+            <mdate calendar="gregorian">
+                <year>2013</year>
+                <month>06</month>
+                <day>21</day>
+            </mdate>
+            <loaned>true</loaned>
+            <signature>Signatura</signature>
+        </entry>
+        <entry id="4">
+            <title>Título</title>
+            <authors>
+                <author>Autor</author>
+            </authors>
+            <code>4</code>
+            <publisher>Editorial</publisher>
+            <pub_year>2000</pub_year>
+            <isbn>958-045643-7</isbn>
+            <pages>147</pages>
+            <keywords>
+                <keyword>Keyword 1</keyword>
+            </keywords>
+            <series>Nombre de la serie</series>
+            <id>4</id>
+            <donated_by>Donante</donated_by>
+            <cdate calendar="gregorian">
+                <year>2013</year>
+                <month>09</month>
+                <day>22</day>
+            </cdate>
+            <mdate calendar="gregorian">
+                <year>2013</year>
+                <month>09</month>
+                <day>22</day>
+            </mdate>
+            <loaned>true</loaned>
+            <signature>Signatura</signature>
+        </entry>
+        <entry id="5">
+            <title>Título</title>
+            <authors>
+                <author>Autor</author>
+            </authors>
+            <code>5</code>
+            <publisher>Editorial</publisher>
+            <pub_year>2000</pub_year>
+            <isbn>958-045643-7</isbn>
+            <pages>147</pages>
+            <keywords>
+                <keyword>Keyword 1, Keyword 2</keyword>
+            </keywords>
+            <series>Nombre de la serie</series>
+            <id>5</id>
+            <donated_by>Donante</donated_by>
+            <cdate calendar="gregorian">
+                <year>2013</year>
+                <month>09</month>
+                <day>22</day>
+            </cdate>
+            <mdate calendar="gregorian">
+                <year>2013</year>
+                <month>09</month>
+                <day>22</day>
+            </mdate>
+            <signature>Signatura</signature>
+        </entry>
+    </collection>
+    <borrowers>
+        <borrower uid="" name="Pedro Pérez">
+            <loan loanDate="2013-04-26" dueDate="2013-05-10" uid="TellicofYzpa2l9EAi5j" entryRef="1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque consequat augue a risus venenatis, ac pharetra nunc feugiat.</loan>
+        </borrower>
+        <borrower uid="" name="Camila Torres">
+            <loan loanDate="2013-07-10" dueDate="2013-07-31" uid="TellicoFfbgDFGFjmJvz" entryRef="3"></loan>
+            <loan loanDate="2013-09-18" dueDate="2013-10-02" uid="TellicogWFXQjUIU8GYy" entryRef="4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque consequat augue a risus venenatis, ac pharetra nunc feugiat.</loan>
+        </borrower>
+    </borrowers>
 </tellico>
