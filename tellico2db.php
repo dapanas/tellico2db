@@ -27,7 +27,7 @@ foreach ($tellico->collection->fields->field as $field) {
 
 printf("\n=== ENTRIES ===\n\n");
 
-printf(ENTRY_TABLE_FORMAT, "ID", "TITLE", "AUTHOR(S)" , "CODE", "PUBLISHER", "PYEAR", "ISBN", "PAGES", "KEYWORD(S)", "SERIES", "DONATED BY", "C DATE", "M DATE", "L", "SIGNATURE");
+printf(ENTRY_TABLE_FORMAT, "ID", "TITLE", "AUTHOR(S)" , "CODE", "PUBLISHER", "EDITION", "PYEAR", "ISBN", "PAGES", "GENRE(S)", "KEYWORD(S)", "SERIES", "DONATED BY", "C DATE", "M DATE", "L", "SIGNATURE");
 printf("%'-217s\n", "");
 
 foreach ($tellico->collection->entry as $entry) {
@@ -35,18 +35,29 @@ foreach ($tellico->collection->entry as $entry) {
 	$mdate = $entry->mdate->year . "/" . $entry->mdate->month . "/" . $entry->mdate->day;
 	
 	$authors = "";
-	foreach ($entry->authors->author as $author) {
-		$authors .= $author . " ";
+	if ($entry->authors->author) {
+		foreach ($entry->authors->author as $author) {
+			$authors .= $author . " ";
+		}
+	}
+
+	$genres = "";
+	if ($entry->genres->genre) {
+		foreach ($entry->genres->genre as $genre) {
+			$genres .= " " . implode("", explode(",", $genre));
+		}
 	}
 
 	$keywords = "";
-	foreach ($entry->keywords->keyword as $keyword) {
-		$keywords .= " " . implode("", explode(",", $keyword));
+	if ($entry->keywords->keyword) {
+		foreach ($entry->keywords->keyword as $keyword) {
+			$keywords .= " " . implode("", explode(",", $keyword));
+		}
 	}
 
 	$loaned = $entry->loaned ? "T" : "F";
 	
-	printf(ENTRY_TABLE_FORMAT, $entry->id, $entry->title, $authors, $entry->code, $entry->publisher, $entry->pub_year, $entry->isbn, $entry->pages, $keywords, $entry->series, $entry->donated_by, $cdate, $mdate, $loaned, $entry->signature);
+	printf(ENTRY_TABLE_FORMAT, $entry->id, $entry->title, $authors, $entry->code, $entry->publisher, $entry->edition, $entry->pub_year, $entry->isbn, $entry->pages, $genres, $keywords, $entry->series, $entry->donated_by, $cdate, $mdate, $loaned, $entry->signature);
 }
 
 printf("\n=== BORROWERS ===\n\n");
